@@ -30,9 +30,9 @@ class EnqueueSimpleBusExtension extends ConfigurableExtension implements Prepend
         $merged = $this->processConfiguration($this->getConfiguration($config, $container), $config);
 
         // Common for all messages.
-        $container->prependExtensionConfig('simple_bus_asynchronous', [
-            'object_serializer_service_id' => ObjectSerializer::class,
-        ]);
+#        $container->prependExtensionConfig('simple_bus_asynchronous', [
+#            'object_serializer_service_id' => ObjectSerializer::class,
+#        ]);
 
         // Enable async commands.
         if ($merged['commands']['enabled']) {
@@ -60,9 +60,6 @@ class EnqueueSimpleBusExtension extends ConfigurableExtension implements Prepend
 
     protected function loadInternal(array $config, ContainerBuilder $container)
     {
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
-        $loader->load('services.xml');
-
         if ($config['commands']['enabled']) {
             $this->configureQueue(Configuration::TYPE_COMMANDS, $config['commands'], $container);
         }
