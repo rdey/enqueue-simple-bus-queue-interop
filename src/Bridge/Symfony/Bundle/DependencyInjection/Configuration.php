@@ -53,7 +53,7 @@ class Configuration implements ConfigurationInterface
                 ->end()
                 ->arrayNode('queue_map')
                     ->requiresAtLeastOneElement()
-                    ->useAttributeAsKey(true)
+                    ->useAttributeAsKey('class')
                     ->scalarPrototype()
                         ->isRequired()
                     ->end()

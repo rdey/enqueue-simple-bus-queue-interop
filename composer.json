@@ -9,15 +9,15 @@
     "simple-bus/asynchronous": "^3.0"
   },
   "require-dev": {
-    "enqueue/enqueue": "^0.9",
-    "enqueue/null": "^0.9",
+    "enqueue/enqueue": "^0.10.1",
+    "enqueue/null": "^0.10.1",
     "friendsofphp/php-cs-fixer": "^2.12",
     "long-running/long-running": "^0.3",
-    "matthiasnoback/symfony-dependency-injection-test": "^3.0",
+    "matthiasnoback/symfony-dependency-injection-test": "^3.0|^4.0",
     "php-coveralls/php-coveralls": "^2.1",
-    "symfony/framework-bundle": "^4.1",
-    "symfony/phpunit-bridge": "^4.1",
-    "symfony/serializer": "^4.1"
+    "symfony/framework-bundle": "^4.3|^5.0",
+    "symfony/phpunit-bridge": "^4.3|^5.0",
+    "symfony/serializer": "^4.3|^5.0"
   },
   "autoload": {
     "psr-4": { "Enqueue\\SimpleBus\\": "src/" }
